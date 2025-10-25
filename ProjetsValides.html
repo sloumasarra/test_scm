@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ProjetsValides.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" alt="logo">
+                    <p>Sada9a</p>
+                </a>
+
+                <!-- Icône menu burger -->
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+                <!-- Menu -->
+                <ul class="navbarActions" id="menu">
+                    <li class="nav-item"><a class="nav-link" href="Accueil.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inscription.html">S'inscrire</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inscriptionProjet.html">Inscrire mon projet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Connexion.html">Se connecter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header> 
+
+    <!-- Barre de recherche -->
+    <section class="search-section">
+        <h2>🔍 Rechercher un projet</h2>
+        <input type="text"  id="searchKeyword" placeholder="Entrez un mot-clé..">
+        <button onclick="searchProjects()">Rechercher</button>
+        <button onclick="showAllProjects()" id="toutProjet">Afficher les projets disponibles</button>
+
+    </section>
+
+    <main>
+        <!-- Loader (Effet de chargement) -->
+        <div id="loader" class="loader-container">
+            <div class="spinner"></div>
+            <p>Chargement des projets...</p>
+        </div>
+        <!-- Message si aucun projet -->
+        <div id="no-projects-message" class="hidden">
+            <p>Aucun projet n'est encore disponible. Revenez bientôt pour découvrir les nouvelles demandes de dons !</p>
+        </div>
+
+
+
+        <!-- Liste des projets (remplie dynamiquement) -->
+        <div id="projects-list"></div>
+    </main>
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Logo Sada9a">
+                <p>Sada9a - Ensemble, faisons la différence.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Liens utiles</h3>
+                <ul>
+                    <li><a href="Accueil.html">Accueil</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="inscription.html">S'inscrire</a></li>
+                    <li><a href="inscriptionProjet.html">Inscrire un projet</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-social">
+                <h3>Suivez-nous</h3>
+                <ul>
+                    <li><a href="#"><img src="facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="instagram.png" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="linkedin.png" alt="LinkedIn"></a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-contact">
+                <h3>Nous contacter</h3>
+                <p>Email : <a href="mailto:sloumasarah@gmail.com">sloumasarah@gmail.com </a><br><a href="mailto:malekmj59@gmail.com">malekmj59@gmail.com</a></p>
+                <p>Téléphone : +216 52 413 761</p>
+                <p>Adresse : Tunis, Tunisie</p>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Sada9a. Tous droits réservés. | <a href="mentions.html">Mentions légales</a></p>
+        </div>
+    </footer>   
+    <script src="ProjetsValides.js"></script>
+</body>
+</html>

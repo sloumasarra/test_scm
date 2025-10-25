@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DonAction</title>
+    <link rel="icon" type="image/png" href="Sada9a.jpg">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" alt="logo">
+                    <p>Sada9a</p>
+                </a>
+
+                <!-- Icône menu burger -->
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+                <!-- Menu -->
+                <ul class="navbarActions" id="menu">
+                    <li class="nav-item"><a class="nav-link" href="Accueil.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inscription.html">S'inscrire</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inscriptionProjet.html">Inscrire mon projet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Connexion.html">Se connecter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="impact-zone">
+        <img src="solidarity.jpeg" class="active" alt="Image 1">
+        <img src="Image2.jpg" alt="Image 2">
+        <img src="impact2.jpeg" alt="Image 3">
+        <img src="impact3.jpeg" alt="image 4">
+        <img src="impact4.jpg" alt="image 5">
+        <img src="impact5.jpg" alt="image 6">
+        <img src="Image6.jpeg" alt="Image6">
+        <div class="impact-zone-content">
+            <h1>Bienvenue sur Sada9a</h1>
+            <p>Transformez vos idées en actions ! Rejoignez une communauté engagée où chaque projet compte, chaque geste fait la différence et chaque contribution crée un impact durable.</p>
+            <a href="#inscription" class="btn">Rejoindre maintenant</a>
+        </div>
+    </section>    
+    <div class="contenu">
+        <section>
+            <p>Sada9a</p>
+            <br><br>
+            <ul class="navContenu">
+                <li><a href="#" class="nav-link">Voir tout</a></li>
+                <li><a href="#" class="nav-link">Association</a></li>
+                <li><a href="#" class="nav-link">Education</a></li>
+                <li><a href="#" class="nav-link">Solidarités</a></li>
+            </ul>
+        </section>
+        <section class="project-cards">
+            <div class="card-container">
+                <!--card 1 : fournitures scolaires zones rurales-->
+                <div class="project-card">
+                    <img src="education.jpg" alt="image projet fournitures" class="project-img">
+                    <div class="card-content">
+                        <h3>Fournitures Scolaires pour Enfants Défavorisés</h3>
+                        <p class="project-description"><span class="highlight">Description :</span>Fournir des fournitures scolaires, des uniformes et des bourses pour les enfants des régions rurales, leur permettant d'accéder à une éducation de qualité.</p>
+                        <p class="project-description"><span class="highlight">Objectif :</span>Améliorer les conditions d'éducation dans les régions défavorisées.</p>
+                        <p class="organized-by"><span class="organized-by">Organisé par :</span>Fondation Humanitaire Internationale</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%;"></div>
+                        </div>
+                        <p class="remaining">Il reste 4000 TND à collecter.</p>
+                        <a href="projet_detail.php?id=1" class="btn">Voir plus</a>
+                    </div>
+                </div>
+                <!-- Card 2: Santé -->
+                <div class="project-card">
+                    <img src="sante.jpg" alt="image projet soins de santé" class="project-img">
+                    <div class="card-content">
+                        <h3>Soins Médicaux pour les Défavorisés</h3>
+                        <p class="project-description"><span class="highlight">Description :</span> Fournir des soins médicaux gratuits aux familles des régions rurales qui n'ont pas accès à des services de santé de qualité.</p>
+                        <p class="project-description"><span class="highlight">Objectif :</span> Offrir des soins de santé de base et des consultations gratuites pour les personnes dans le besoin.</p>
+                        <p class="organized-by"><b>Organisé par :</b> Association Santé Solidaire</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 45%;"></div>
+                        </div>
+                        <p class="remaining">Il reste 8000 TND à collecter.</p>
+                        <a href="projet_detail.php?id=2" class="btn">Voir plus</a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="project-card">
+                    <img src="environnement.jpg" alt="image projet environnement" class="project-img">
+                    <div class="card-content">
+                        <h3>Reforestation et Préservation de la Nature</h3>
+                        <p class="project-description"><span class="highlight">Description :</span> Lancer des projets de reforestation dans les régions touchées par la déforestation et sensibiliser la population à la préservation de l'environnement.</p>
+                        <p class="project-description"><span class="highlight">Objectif :</span> Restaurer les espaces verts et améliorer la biodiversité.</p>
+                        <p class="organized-by"><b>Organisé par :</b> Association Green Planet</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;"></div>
+                        </div>
+                        <p class="remaining">Il reste 2000 TND à collecter.</p>
+                        <a href="projet_detail.php?id=3" class="btn">Voir plus</a>
+                    </div>
+                </div>
+                <!-- Card 4: Fournitures Humanitaires pour les Réfugiés -->
+                <div class="project-card">
+                    <img src="humanitaire_refugies.jpeg" alt="image projet aide réfugiés" class="project-img">
+                    <div class="card-content">
+                        <h3>Aide d'Urgence aux Réfugiés</h3>
+                        <p class="project-description"><span class="highlight">Description :</span> Fournir des secours immédiats aux réfugiés en leur fournissant de la nourriture, de l'eau potable, des couvertures, et des abris temporaires dans les camps de réfugiés.</p>
+                        <p class="project-description"><span class="highlight">Objectif :</span> Soulager la souffrance des réfugiés et leur offrir un environnement sûr et digne.</p>
+                        <p class="organized-by"><span class="organized-by">Organisé par :</span> Organisation Humanitaire Internationale</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                        <p class="remaining">Il reste 3000 TND à collecter.</p>
+                        <a href="projet_detail.php?id=7" class="btn">Voir plus</a>
+                    </div>
+                </div>
+                <!-- Card 5: Accès à l'Eau Potable pour les Communautés Rurales -->
+                <div class="project-card">
+                    <img src="eau_potable.jpeg" alt="image projet eau potable" class="project-img">
+                    <div class="card-content">
+                        <h3>Accès à l'Eau Potable pour les Communautés Rurales</h3>
+                        <p class="project-description"><span class="highlight">Description :</span> Fournir un accès à l'eau potable pour les communautés rurales en construisant des puits, des systèmes de filtration ou des réservoirs d'eau dans les zones défavorisées.</p>
+                        <p class="project-description"><span class="highlight">Objectif :</span> Améliorer la santé publique et réduire les maladies liées à l'eau.</p>
+                        <p class="organized-by"><span class="organized-by">Organisé par :</span> Fondation Eau Pure</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 50%;"></div>
+                        </div>
+                        <p class="remaining">Il reste 5000 TND à collecter.</p>
+                        <a href="projet_detail.php?id=4" class="btn">Voir plus</a>
+                    </div>
+                </div>
+                <!-- Card 6: Distribution de Nourriture aux Sans-abris -->
+                <div class="project-card">
+                    <img src="nourriture_sansabris.jpeg" alt="image projet distribution nourriture" class="project-img">
+                    <div class="card-content">
+                        <h3>Distribution de Nourriture aux Sans-abris</h3>
+                        <p class="project-description"><span class="highlight">Description :</span> Fournir des repas chauds, des produits alimentaires de première nécessité et des kits d'hygiène aux personnes sans abri dans les grandes villes.</p>
+                        <p class="project-description"><span class="highlight">Objectif :</span> Garantir que personne ne manque de nourriture et d'hygiène de base, en particulier en période hivernale.</p>
+                        <p class="organized-by"><span class="organized-by">Organisé par :</span> Solidarité Urgence</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 55%;"></div>
+                        </div>
+                        <p class="remaining">Il reste 5000 TND à collecter.</p>
+                        <a href="projet_detail.php?id=8" class="btn">Voir plus</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Logo Sada9a">
+                <p>Sada9a - Ensemble, faisons la différence.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Liens utiles</h3>
+                <ul>
+                    <li><a href="Accueil.html">Accueil</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="inscription.html">S'inscrire</a></li>
+                    <li><a href="inscriptionProjet.html">Inscrire un projet</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-social">
+                <h3>Suivez-nous</h3>
+                <ul>
+                    <li><a href="#"><img src="facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="instagram.png" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="linkedin.png" alt="LinkedIn"></a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-contact">
+                <h3>Nous contacter</h3>
+                <p>Email : <a href="mailto:sloumasarah@gmail.com">sloumasarah@gmail.com </a><br><a href="mailto:mailto:malekmj59@gmail.com">malekmj59@gmail.com</a></p>
+                <p>Téléphone : +216 52 413 761</p>
+                <p>Adresse : Tunis, Tunisie</p>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Sada9a. Tous droits réservés. | <a href="mentions.html">Mentions légales</a></p>
+        </div>
+    </footer>    
+    <!-- Script JavaScript -->
+    <script src="index.js"></script>
+</body>
+</html>

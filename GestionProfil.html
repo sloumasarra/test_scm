@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="GestionProfil.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" alt="logo">
+                    <p>Sada9a</p>
+                </a>
+
+                <!-- Icône menu burger -->
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+                <!-- Menu -->
+                <ul class="navbarActions" id="menu">
+                    <li class="nav-item"><a class="nav-link" href="Accueil.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inscription.html">S'inscrire</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inscriptionProjet.html">Inscrire mon projet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Connexion.html">Se connecter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header> 
+
+    <div class="profile-container">
+        <h1>Mon profil</h1>
+        <form action="" id="profileForm" action="update_profile.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" value="<?php echo $nom_responsable; ?>" disabled>
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom:</label>
+                <input type="text" id="prenom" name="prenom" value="<?php echo $prenom_responsable; ?>" disabled>
+            </div>
+            <div class="form-group">
+                <label for="cin">CIN:</label>
+                <input type="text" id="cin" name="cin" value="<?php echo $cin_responsable; ?>" disabled>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<?php echo $email_responsable; ?>" disabled>
+            </div>
+            <div class="form-group">
+                <label for="nom_association">Nom de l'association:</label>
+                <input type="text" id="nom_association" name="nom_association" value="<?php echo $nom_association; ?>" disabled>
+            </div>
+            <div class="form-group">
+                <label for="adresse_association">Adresse de l'association:</label>
+                <input type="text" id="adresse_association" name="adresse_association" value="<?php echo $adresse_association; ?>" disabled>
+            </div>
+            <div class="form-group" id="logoGroup">
+                <label for="logo">Logo de l'association:</label>
+                <div id="logoPreviewContainer">
+                    <img src="uploads/<?php echo $logo_association; ?>" alt="Logo" id="logoPreview" style="width: 100px; height: auto;">
+                </div>
+                <input type="file" id="logo" name="logo" accept="image/*" style="display: none;">
+            </div>
+            <div class="form-group">
+                <label for="matricule_fiscal">Matricule Fiscal:</label>
+                <input type="text" id="matricule_fiscal" name="matricule_fiscal" value="<?php echo $matricule_fiscal; ?>" disabled>
+            </div>
+
+            <div class="form-group">
+                <button type="button" id="editButton" onclick="enableEdit()">Modifier</button>
+                <button type="submit" id="saveButton" style="display: none;">Enregistrer</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Logo Sada9a">
+                <p>Sada9a - Ensemble, faisons la différence.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Liens utiles</h3>
+                <ul>
+                    <li><a href="Accueil.html">Accueil</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="inscription.html">S'inscrire</a></li>
+                    <li><a href="inscriptionProjet.html">Inscrire un projet</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-social">
+                <h3>Suivez-nous</h3>
+                <ul>
+                    <li><a href="#"><img src="facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="instagram.png" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="linkedin.png" alt="LinkedIn"></a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-contact">
+                <h3>Nous contacter</h3>
+                <p>Email : <a href="mailto:sloumasarah@gmail.com">sloumasarah@gmail.com </a><br><a href="mailto:mailto:malekmj59@gmail.com">malekmj59@gmail.com</a></p>
+                <p>Téléphone : +216 52 413 761</p>
+                <p>Adresse : Tunis, Tunisie</p>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Sada9a. Tous droits réservés. | <a href="mentions.html">Mentions légales</a></p>
+        </div>
+    </footer> 
+    <script src="GestionProfil.js"></script>
+</body>
+</html>
+
+<!-- afficher les informations du responsable dans des champs en lecture seule au départ et, lorsqu'un bouton de modification est cliqué, les champs deviennent modifiables pour permettre à l'utilisateur de mettre à jour ses informations.-->

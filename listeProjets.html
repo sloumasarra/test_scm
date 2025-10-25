@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="listeProjets.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" alt="logo">
+                    <p>Sada9a</p>
+                </a>
+
+                <!-- Icône menu burger -->
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+                <!-- Menu -->
+                <ul class="navbarActions" id="menu">
+                    <li class="nav-item"><a class="nav-link" href="Accueil.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inscription.html">S'inscrire</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inscriptionProjet.html">Inscrire mon projet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Connexion.html">Se connecter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header> 
+
+    <!-- Liste des projets -->
+    <main>
+        <h2>La iste de tes projets</h2>
+        <div class="projects-list" id="projects-list"></div>
+    </main>
+    <!-- Modale pour afficher les détails du projet -->
+    <div id="project-details" class="modal">
+        <div class="modal-content">
+            <span id="close-btn" class="close-btn" onclick="closeDetails()">&times;</span>
+            <div class="project-details">
+
+                <div class="project-header">
+                    <img id="project-image" src="" alt="Image du projet">
+                    <div class="project-info">
+                        <h2 id="project-title"></h2>
+                        <p id="project-description"></p>
+                        <p><strong>Date limite:</strong> <span id="project-deadline"></span></p>
+                    </div>
+                </div>
+
+                <div class="donors-info">
+                    <h3>Liste des Donateurs</h3>
+                    <table id="donors-table">
+                        <thead>
+                            <tr>
+                                <th>Nom du Donateur</th>
+                                <th>Montant (dt)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="donors-list"></tbody>
+                    </table>
+                </div>
+
+                <div class="amount-info">
+                    <p><strong>Montant Total collecté:</strong> <span id="total-collected"></span></p>
+                    <p><strong>Montant restant à collecter:</strong> <span id="remaining-amount"></span></p>
+                </div>
+
+                <button id="delete-btn" class="delete-btn" onclick="deleteProject()">Supprimer</button>
+                <button id="close-details-btn" class="close-btn" onclick="closeDetails()">Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Logo Sada9a">
+                <p>Sada9a - Ensemble, faisons la différence.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Liens utiles</h3>
+                <ul>
+                    <li><a href="Accueil.html">Accueil</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="inscription.html">S'inscrire</a></li>
+                    <li><a href="inscriptionProjet.html">Inscrire un projet</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-social">
+                <h3>Suivez-nous</h3>
+                <ul>
+                    <li><a href="#"><img src="facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="instagram.png" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="linkedin.png" alt="LinkedIn"></a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-contact">
+                <h3>Nous contacter</h3>
+                <p>Email : <a href="mailto:sloumasarah@gmail.com">sloumasarah@gmail.com </a><br><a href="mailto:malekmj59@gmail.com">malekmj59@gmail.com</a></p>
+                <p>Téléphone : +216 52 413 761</p>
+                <p>Adresse : Tunis, Tunisie</p>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Sada9a. Tous droits réservés. | <a href="mentions.html">Mentions légales</a></p>
+        </div>
+    </footer> 
+    <script src="listeProjtes.js"></script>
+</body>
+</html>

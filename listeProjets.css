@@ -1,0 +1,426 @@
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Fixer le menu en haut */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #001F3F; /* Bleu nuit */
+    padding: 15px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+/* Conteneur de la barre */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Style du logo */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-brand img {
+    height: 80px;
+    margin-right: 10px;
+}
+
+/* Menu horizontal (grand écran) */
+.navbarActions {
+    list-style: none;
+    display: flex;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.navbarActions li {
+    margin: 0 15px;
+}
+
+.navbarActions a {
+    color: #D3D3D3; /* Gris clair */
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbarActions a:hover {
+    color: #FFA500; /* Orange */
+}
+
+/* Burger menu pour mobile */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+/* Liste des projets */
+main {
+    margin-top: 100px; /* Ajuste cette valeur selon la hauteur du menu */
+    padding: 20px;
+}
+main h2{
+    text-align: center;
+}
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+/* Style des cards de projet */
+.project-card {
+    background-color: cornsilk;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+
+}
+/* Description du projet */
+.project-card p {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+/* Bouton Voir Détails */
+.project-card button {
+    background: #ff6b00;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+/* Effet au survol du bouton */
+.project-card button:hover {
+    background: #cc5500;
+}
+.project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+/* Header du projet */
+.project-header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Modale */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+/* Effet d'apparition */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.close-btn {
+    background: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+/* Image du projet */
+#project-image {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #002855;
+}
+
+/* Infos générales */
+.project-info {
+    flex-grow: 1;
+}
+
+.project-info h2 {
+    color: #002855;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.project-info p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Tableau des donateurs */
+.donors-info h3 {
+    text-align: center;
+    color: #002855;
+    margin-bottom: 10px;
+}
+
+#donors-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#donors-table th, #donors-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+#donors-table th {
+    background: #002855;
+    color: white;
+}
+
+#donors-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+/* Montants */
+.amount-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.amount-box {
+    background: #f0f8ff;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    width: 48%;
+    font-weight: bold;
+    color: #002855;
+}
+
+/* Boutons */
+button {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+/* Bouton Fermer */
+.close-btn {
+    background: #ff6b00;
+    color: white;
+    border: none;
+    width: 100px;
+}
+
+.close-btn:hover {
+    background: #cc5500;
+}
+
+/* Bouton Supprimer */
+.delete-btn {
+    background: red;
+    color: white;
+    border: none;
+    width: 100px;
+}
+
+.delete-btn:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+/* Footer */
+footer {
+    background-color: #001F3F; /* Bleu nuit */
+    color: white;
+    padding: 50px 20px; /* Augmenter l'espace intérieur */
+    text-align: center;
+    margin-top: 70px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 40px; /* Plus d'espace entre les sections */
+}
+
+.footer-logo {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.footer-logo img {
+    height: 80px; /* Agrandir le logo */
+}
+
+.footer-logo p {
+    font-size: 16px;
+    margin-top: 15px;
+    color: #D3D3D3; /* Gris clair */
+}
+
+.footer-links, .footer-social, .footer-contact {
+    flex: 1;
+    min-width: 250px;
+    margin-top: 30px; /* Augmenter l'espace entre les blocs */
+}
+
+.footer-links h3, .footer-social h3, .footer-contact h3 {
+    font-size: 20px; /* Agrandir les titres */
+    margin-bottom: 15px;
+}
+
+.footer-links ul, .footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a, .footer-contact a {
+    color: #FFA500; /* Orange */
+    text-decoration: none;
+    font-size: 16px; /* Agrandir le texte */
+}
+
+.footer-links a:hover, .footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-social ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-social img {
+    height: 40px; /* Agrandir les icônes des réseaux sociaux */
+}
+
+.footer-bottom {
+    border-top: 1px solid #D3D3D3;
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 16px;
+    color: #D3D3D3;
+}
+
+
+
+
+/* Menu vertical (mobile) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+        align-self: flex-end;
+        margin-right: 20px;
+    }
+
+    .navbarActions {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #001F3F;
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .navbarActions.active {
+        display: flex; /* Quand "active" est ajoutée, le menu apparaît */
+    }
+
+    .navbarActions li {
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,291 @@
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    background: url(pay2.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Fixer le menu en haut */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #001F3F; /* Bleu nuit */
+    padding: 15px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+/* Conteneur de la barre */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Style du logo */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-brand img {
+    height: 80px;
+    margin-right: 10px;
+}
+
+/* Menu horizontal (grand écran) */
+.navbarActions {
+    list-style: none;
+    display: flex;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.navbarActions li {
+    margin: 0 15px;
+}
+
+.navbarActions a {
+    color: #D3D3D3; /* Gris clair */
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbarActions a:hover {
+    color: #FFA500; /* Orange */
+}
+
+/* Burger menu pour mobile */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+#titre {
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(90deg, #00AEEF, #FFA500);
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 110px;
+}
+
+.donation-container {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 50%;
+    min-width: 350px;
+    margin-top: 50px;
+    color: #002147;
+    margin-left: 25%;
+
+
+}
+
+h2 {
+    color: #00AEEF;
+}
+p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #444;
+
+}
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #00AEEF;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+button {
+    background: #00AEEF;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: #007BB5;
+}
+.confirmation {
+    margin-top: 15px;
+    font-weight: bold;
+    color: green;
+}
+
+.additional-info {
+    margin-top: 25px;
+    text-align: left;
+    font-size: 16px;
+    color: #002147;
+    background: #DFF6FF;
+    padding: 20px;
+    border-radius: 10px;
+}
+.additional-info ul {
+    padding-left: 20px;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #001F3F; /* Bleu nuit */
+    color: white;
+    padding: 50px 20px; /* Augmenter l'espace intérieur */
+    text-align: center;
+    margin-top: 70px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 40px; /* Plus d'espace entre les sections */
+}
+
+.footer-logo {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.footer-logo img {
+    height: 80px; /* Agrandir le logo */
+}
+
+.footer-logo p {
+    font-size: 16px;
+    margin-top: 15px;
+    color: #D3D3D3; /* Gris clair */
+}
+
+.footer-links, .footer-social, .footer-contact {
+    flex: 1;
+    min-width: 250px;
+    margin-top: 30px; /* Augmenter l'espace entre les blocs */
+}
+
+.footer-links h3, .footer-social h3, .footer-contact h3 {
+    font-size: 20px; /* Agrandir les titres */
+    margin-bottom: 15px;
+}
+
+.footer-links ul, .footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a, .footer-contact a {
+    color: #FFA500; /* Orange */
+    text-decoration: none;
+    font-size: 16px; /* Agrandir le texte */
+}
+
+.footer-links a:hover, .footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-social ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-social img {
+    height: 40px; /* Agrandir les icônes des réseaux sociaux */
+}
+
+.footer-bottom {
+    border-top: 1px solid #D3D3D3;
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 16px;
+    color: #D3D3D3;
+}
+
+
+
+
+/* Menu vertical (mobile) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+        align-self: flex-end;
+        margin: 10px;
+    }
+
+    .navbarActions {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #001F3F;
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .navbarActions.active {
+        display: flex;
+    }
+
+    .navbarActions li {
+        margin: 10px 0;
+    }
+
+    #logoutBtn {
+        width: 90%;
+        text-align: center;
+        margin-top: 10px;
+    }
+}

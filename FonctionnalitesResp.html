@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord- Responsable </title>
+    <link rel="stylesheet" href="FonctionnalitesResp.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="logo">
+                <p>Sada9a</p>
+            </a>
+            <!-- Icône menu burger -->
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <ul class="navbarActions" id="menu">
+                <!-- Les éléments de navigation vont être injectés dynamiquement -->
+            </ul>
+        </div>
+        <button id="logoutBtn" class="logout-btn">Déconnexion</button>
+    </nav>
+
+    <main>
+        <div class="header-main">
+            <h1>Bienvenue, <span id="nomResponsable">Responsable</span> ! 🎉</h1>
+        </div>
+        <p class="intro-responsable">
+            En tant que responsable, vous pouvez gérer vos projets, suivre les dons et mettre à jour vos informations. Utilisez les fonctionnalités ci-dessous pour prendre le contrôle de vos projets et les faire évoluer.
+        </p>
+        <div class="dashboard">
+            <section class="card-section">
+                <div class="card" onclick="redirectTo('ajoutProjet.html')">
+                    <h2>➕ Ajouter un Projet</h2>
+                    <p>Créez un nouveau projet en quelques clics.</p>
+                </div>
+
+                <div class="card" onclick="redirectTo('listeProjets.html')">
+                    <h2>📜 Voir Mes Projets</h2>
+                    <p>Consultez et suivez tous vos projets actifs ainsi que les donateurs.</p>
+                </div>
+
+                <div class="card" onclick="redirectTo('modifierProfil.html')">
+                    <h2>👤 Modifier Mon Profil</h2>
+                    <p>Changez vos informations personnelles et associatives.</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Logo Sada9a">
+                <p>Sada9a - Ensemble, faisons la différence.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Liens utiles</h3>
+                <ul>
+                    <li><a href="Accueil.html">Accueil</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="inscription.html">S'inscrire</a></li>
+                    <li><a href="inscriptionProjet.html">Inscrire un projet</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-social">
+                <h3>Suivez-nous</h3>
+                <ul>
+                    <li><a href="#"><img src="facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="instagram.png" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="linkedin.png" alt="LinkedIn"></a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-contact">
+                <h3>Nous contacter</h3>
+                <p>Email : <a href="mailto:sloumasarah@gmail.com">sloumasarah@gmail.com </a><br><a href="mailto:mailto:malekmj59@gmail.com">malekmj59@gmail.com</a></p>
+                <p>Téléphone : +216 52 413 761</p>
+                <p>Adresse : Tunis, Tunisie</p>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Sada9a. Tous droits réservés. | <a href="mentions.html">Mentions légales</a></p>
+        </div>
+    </footer> 
+    <script src="FonctionnalitesResp.js"></script>
+</body>
+</html>
